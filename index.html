@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset ="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Train Scheduler Application </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel ="stylesheet" type="text/css" href="assets/css/style.css"> 
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+
+<!-- Moment.js Reference -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!--Train tracker-->
+<div class ="container">
+<!--Jumbotron-->
+<div class ="jumbotron">
+  <h1 class="text-center">Train Schedule!</h1>
+  <h3 class="text-center ride">Enjoy your Journey!!!</h3>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+    <!--Current Train Schedule-->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title current"><strong>Current Train Schedule</strong></h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover" id='trainTable'>
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Next Arrival</th>
+                <th>Frequency(In minutes)</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Add Trains  -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title add"><strong>Add Trains</strong></h3>
+        </div>
+        <div class="panel-body">
+
+        <!-- Entry Form -->
+        <form>
+          <div class="form-group">
+            <label for="">Train Name</label>
+            <input type="text" class="form-control" id="trainNameInput">
+          </div>
+
+          <div class="form-group">
+            <label for="">Destination</label>
+            <input type="text" class="form-control" id="destinationInput">
+          </div>
+
+          <div class="form-group">
+            <label for="">First Train Time (HH:mm)</label>
+            <input type="text" class="form-control" id="timeInput">
+          </div>
+
+          <div class="form-group">
+            <label for="">Frequency(In minutes)</label>
+            <input type="text" class="form-control" id="frequencyInput">
+          </div>
+          
+          <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
+        </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Javascript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src='assets/javascript/app.js'></script>
+</body>
+</html>
